@@ -1,0 +1,34 @@
+.hero-section {
+  background-image: url("src/assets/templatemo-wave-banner.jpg"),
+    linear-gradient(#348cd2, #ffffff);
+  background-repeat: no-repeat;
+  background-size: 108% 100%;
+  background-position: top;
+  padding-top: 200px;
+}
+
+.hero-section .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media screen and (max-width: 540px) {
+  .hero-section {
+    background-size: 180% 65%;
+    /* T o o p l a t e . c o m   C u s t o m i z e d */
+  }
+}
+
+@media screen and (max-width: 1240px) {
+  .hero-section {
+    background-size: 116%;
+    /* T o o p l a t e . c o m   C u s t o m i z e d */
+  }
+}
+
+@media screen and (min-width: 2160px) {
+  .hero-section {
+    background-size: 100% 90%;
+    /* T o o p l a t e . c o m   C u s t o m i z e d */
+  }
+}

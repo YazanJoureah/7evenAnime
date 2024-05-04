@@ -1,0 +1,17 @@
+.site-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("src/assets/templatemo-wave-header.jpg"),
+    linear-gradient(#348cd2, #ffffff);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 480px;
+  position: relative;
+}
+
+.site-header h2 {
+  color: var(--white-color);
+}
