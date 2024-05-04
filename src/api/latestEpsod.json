@@ -1,0 +1,76 @@
+{
+  "pagination": {
+    "last_visible_page": 1,
+    "has_next_page": false
+  },
+  "data": [
+    {
+      "entry": {
+        "mal_id": 54842,
+        "url": "https://myanimelist.net/anime/54842/Sugar_Apple_Fairy_Tale_Part_2",
+        "images": {
+          "jpg": {
+            "image_url": "https://cdn.myanimelist.net/images/anime/1693/138042.jpg",
+            "small_image_url": "https://cdn.myanimelist.net/images/anime/1693/138042t.jpg",
+            "large_image_url": "https://cdn.myanimelist.net/images/anime/1693/138042l.jpg"
+          },
+          "webp": {
+            "image_url": "https://cdn.myanimelist.net/images/anime/1693/138042.webp",
+            "small_image_url": "https://cdn.myanimelist.net/images/anime/1693/138042t.webp",
+            "large_image_url": "https://cdn.myanimelist.net/images/anime/1693/138042l.webp"
+          }
+        },
+        "title": "Sugar Apple Fairy Tale Part 2"
+      },
+      "episodes": [
+        {
+          "mal_id": 6,
+          "url": "https://myanimelist.net/anime/54842/Sugar_Apple_Fairy_Tale_Part_2/episode/6",
+          "title": "Episode 6",
+          "premium": true
+        },
+        {
+          "mal_id": 5,
+          "url": "https://myanimelist.net/anime/54842/Sugar_Apple_Fairy_Tale_Part_2/episode/5",
+          "title": "Episode 5",
+          "premium": true
+        }
+      ],
+      "region_locked": false
+    },
+    {
+      "entry": {
+        "mal_id": 49612,
+        "url": "https://myanimelist.net/anime/49612/Ningen_Fushin_no_Boukensha-tachi_ga_Sekai_wo_Sukuu_you_desu",
+        "images": {
+          "jpg": {
+            "image_url": "https://cdn.myanimelist.net/images/anime/1446/131578.jpg",
+            "small_image_url": "https://cdn.myanimelist.net/images/anime/1446/131578t.jpg",
+            "large_image_url": "https://cdn.myanimelist.net/images/anime/1446/131578l.jpg"
+          },
+          "webp": {
+            "image_url": "https://cdn.myanimelist.net/images/anime/1446/131578.webp",
+            "small_image_url": "https://cdn.myanimelist.net/images/anime/1446/131578t.webp",
+            "large_image_url": "https://cdn.myanimelist.net/images/anime/1446/131578l.webp"
+          }
+        },
+        "title": "Ningen Fushin no Boukensha-tachi ga Sekai wo Sukuu you desu"
+      },
+      "episodes": [
+        {
+          "mal_id": 12,
+          "url": "https://myanimelist.net/anime/49612/Ningen_Fushin_no_Boukensha-tachi_ga_Sekai_wo_Sukuu_you_desu/episode/12",
+          "title": "Episode 12",
+          "premium": true
+        },
+        {
+          "mal_id": 11,
+          "url": "https://myanimelist.net/anime/49612/Ningen_Fushin_no_Boukensha-tachi_ga_Sekai_wo_Sukuu_you_desu/episode/11",
+          "title": "Episode 11",
+          "premium": true
+        }
+      ],
+      "region_locked": false
+    }
+  ]
+}

@@ -69,3 +69,21 @@ export const getCurrentSeasson = Axios({
   return data;
 });
 */
+
+// Get Latest Episodes
+export const getLatestEpisodes = async () => {
+  try {
+    const response = await fetch("src/api/latestEpsod.json")
+      .then((res) => res.json())
+      .then((json) => {
+        return json;
+      });
+
+    return response.data;
+  } catch (error) {
+    console.error("Error fetching Latest Episodes:", error);
+
+    // Handle errors appropriately, e.g., throw an error or return an empty array
+    return [];
+  }
+};
