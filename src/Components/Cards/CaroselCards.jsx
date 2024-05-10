@@ -23,7 +23,7 @@ export default function CaroselCards({ item }) {
             ))}
           </div>
 
-          <div className="desc">{`${item.synopsis.slice(0, 150)}......`}</div>
+          <div className="desc modal-container ">{item.synopsis}</div>
           <div className="cards-footer">
             <div className="info">
               <span>

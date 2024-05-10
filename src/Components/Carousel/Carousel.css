@@ -1,11 +1,11 @@
 .swiper {
   max-width: 100%;
 }
-.card {
+.swiper .card {
   height: 400px !important;
   width: 300px !important;
 }
-.card-container {
+.card .card-container {
   position: relative;
   height: 100%;
   background: black !important;
@@ -37,12 +37,12 @@
   left: 20%;
 }
 
-.image {
+.card-container .image {
   position: absolute;
-  border-radius: 5px !important;
+  border-radius: 5px;
   object-fit: cover;
-  width: 98% !important;
-  height: 98% !important;
+  width: 98%;
+  height: 98%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -97,6 +97,12 @@
   font-weight: 600;
   color: white;
   opacity: 0;
+  font-size: 15px;
+  overflow-y: auto;
+  margin: 10px;
+  padding: 0;
+  text-align: center;
+  scrollbar-width: none;
   transition: all 01.5s ease-in-out;
 }
 
