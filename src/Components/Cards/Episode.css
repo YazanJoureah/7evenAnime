@@ -1,0 +1,62 @@
+.project-info {
+  position: relative;
+  top: -30px;
+}
+
+.e-card .project-title {
+  font-weight: 500;
+  font-size: 1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 20px;
+  gap: 5px;
+}
+
+.tag {
+  font-weight: lighter;
+  color: grey;
+}
+
+/*IF USING IMAGES*/
+
+.e-card {
+  background-color: white;
+  color: black;
+  width: 300px;
+  max-height: 360px;
+  border-radius: 8px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  margin: 25px;
+}
+
+.e-card .e-card-img {
+  position: relative;
+  top: -45px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Change the .card-img div to .card-img img to use img*/
+.e-card .e-card-img a,
+.e-card .e-card-img .images {
+  height: 70%;
+  /* Change this width here to change the width of the color/image */
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transition: all 0.5s;
+}
+
+.e-card .e-card-img img:hover {
+  scale: 1.1;
+}
+
+.project-title .a-title {
+  align-self: center;
+  justify-self: center;
+}

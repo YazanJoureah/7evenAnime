@@ -1,18 +1,23 @@
 import Carousel from "../Components/Carousel/Carousel";
 import "./HomePage.css";
-import { getTopAnime } from "../api/Axios";
+import { getTopAnime, getLatestEpisodes } from "../api/Axios";
 import { useEffect, useState } from "react";
+import EpisodesCards from "../Components/Cards/EpisodesCards";
 
 export default function HomePage() {
   const [topAnimes, setTopAnimes] = useState([]);
+  const [latestEpisodes, setLatestEpisodes] = useState([]);
   const [isLoading, setIsLoading] = useState(true); // Add loading state
 
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true); // Set loading to true before fetching
-      const data = await getTopAnime();
-      console.log(data);
-      setTopAnimes(data);
+      const Anime = await getTopAnime();
+      const Episods = await getLatestEpisodes();
+      console.log(Episods);
+      console.log(Anime);
+      setTopAnimes(Anime);
+      setLatestEpisodes(Episods);
       setIsLoading(false); // Set loading to false after fetching
     };
     fetchData();
@@ -30,7 +35,7 @@ export default function HomePage() {
               Watch it everywhere. Explore your fav .
             </p>
             <a href="#section_2" className="btn custom-btn smoothscroll mt-3">
-              Airing Now
+              Airing
             </a>
           </div>
           {isLoading ? (
@@ -38,6 +43,8 @@ export default function HomePage() {
           ) : (
             <Carousel items={topAnimes} />
           )}
+
+          <EpisodesCards episodes={latestEpisodes} />
         </div>
       </section>
     </>
