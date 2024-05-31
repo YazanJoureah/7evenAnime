@@ -1,7 +1,6 @@
 import "./Episode.css";
 
 export default function EpisodesCards({ episodes }) {
-  console.log(episodes);
   return (
     <>
       {episodes.map((episod) => (
