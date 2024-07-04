@@ -1,17 +1,16 @@
 .swiper {
   max-width: 100%;
 }
-.swiper .card {
-  height: 400px !important;
-  width: 300px !important;
+.swiper .SwiperSlide {
+  height: auto;
+  width: auto;
 }
 .card .card-container {
   position: relative;
   height: 100%;
-  background: black !important;
+  background: transparent !important;
   border-radius: 5px !important;
   overflow: hidden;
-  box-shadow: 0px 0px 10px 1px #000000ee;
   justify-content: center;
   display: flex;
   align-items: center;

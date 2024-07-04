@@ -2,9 +2,8 @@ import Carousel from "../Components/Carousel/Carousel";
 import "./HomePage.css";
 import { getTopAnime, getLatestEpisodes } from "../api/Axios";
 import { useEffect, useState } from "react";
-import EpisodesCards from "../Components/Cards/EpisodesCards";
-import CaroselCards from "../Components/Cards/CaroselCards";
-import AnimeCards from "../Components/Cards/AnimeCards";
+import EpisodesCards from "../Components/Cards/EpisodesCards/EpisodesCards";
+import AnimeCards from "../Components/Cards/AnimeCard/AnimeCards";
 
 export default function HomePage() {
   const [topAnimes, setTopAnimes] = useState([]);

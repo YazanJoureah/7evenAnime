@@ -5,9 +5,8 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/effect-coverflow";
 import "./Carousel.css";
-
 import { EffectCoverflow } from "swiper/modules";
-import CaroselCards from "../Cards/CaroselCards";
+import AnimeCards from "../Cards/AnimeCard/AnimeCards";
 
 export default function Carousel(items) {
   return (
@@ -27,8 +26,8 @@ export default function Carousel(items) {
       className="swiper"
     >
       {items.items?.map((item, index) => (
-        <SwiperSlide key={index} className="card">
-          <CaroselCards item={item} />
+        <SwiperSlide key={index} className="SwiperSlide">
+          <AnimeCards item={item} />
         </SwiperSlide>
       ))}
     </Swiper>
