@@ -1,0 +1,265 @@
+.sec1 {
+  background-image: url("../../assets/LandingPage-sec1.jpg");
+  background-size: cover;
+}
+
+.sec2 {
+  background-image: url("../../assets/Airing_Now.jpg");
+  background-size: cover;
+}
+
+.sec1_content {
+  display: flex;
+  flex-direction: column;
+  margin: 4em;
+  padding: 1em;
+  gap: 1.5em;
+}
+.sec1_content h1 {
+  color: #050505 !important;
+}
+
+.sec1_content span {
+  max-width: 500px;
+  color: #092d53;
+  font-size: 18px;
+}
+
+.sec1_content button,
+.header button {
+  max-width: 200px;
+  position: relative;
+  margin: 0;
+  padding: 14px 30px;
+  outline: none;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: #fff;
+  border: 1px solid rgba(22, 76, 167, 0.6);
+  border-radius: 10px;
+  color: #1d89ff;
+  font-weight: 400;
+  font-family: inherit;
+  z-index: 0;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+.sec1_content button span,
+.header button span {
+  color: #164ca7;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.7px;
+}
+
+.sec1_content button:hover,
+.header button:hover {
+  animation: rotate624 1s ease-in-out both;
+}
+
+.sec1_content button:hover span,
+.header button:hover span {
+  animation: storm1261 1s ease-in-out both;
+  animation-delay: 0.06s;
+}
+
+@keyframes rotate624 {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+
+  25% {
+    transform: rotate(3deg) translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: rotate(-3deg) translate3d(0, 0, 0);
+  }
+
+  75% {
+    transform: rotate(1deg) translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+}
+
+@keyframes storm1261 {
+  0% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+
+  25% {
+    transform: translate3d(4px, 0, 0) translateZ(0);
+  }
+
+  50% {
+    transform: translate3d(-3px, 0, 0) translateZ(0);
+  }
+
+  75% {
+    transform: translate3d(2px, 0, 0) translateZ(0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+}
+
+.btn-shine {
+  border: 1px solid;
+  overflow: hidden;
+  position: relative;
+}
+
+.btn-shine span {
+  z-index: 20;
+}
+
+.btn-shine:after {
+  background: #38ef7d;
+  content: "";
+  height: 155px;
+  left: -75px;
+  opacity: 0.4;
+  position: absolute;
+  top: -50px;
+  transform: rotate(35deg);
+  transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+  width: 50px;
+  z-index: -10;
+}
+
+.btn-shine:hover:after {
+  left: 120%;
+  transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  gap: 5em;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(43, 53, 53, 0.652);
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  gap: 5em;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+.links a {
+  color: #fff;
+  font-size: 24px;
+}
+
+@media (min-width: 1200px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    max-width: 100% !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm {
+    max-width: 100% !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .container,
+  .container-md,
+  .container-sm {
+    max-width: 100% !important;
+  }
+}
+
+@media (min-width: 576px) {
+  .container,
+  .container-sm {
+    max-width: 100% !important;
+  }
+}
+
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+.auth {
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+  align-items: center;
+  margin: auto 50px;
+}
+
+.swiper {
+  width: 600px;
+  height: 300px;
+}
+
+.navigations {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px;
+}
+
+.navigations button {
+  display: flex;
+  height: 3em;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  background-color: #eeeeee4b;
+  border-radius: 3px;
+  letter-spacing: 1px;
+  transition: all 0.2s linear;
+  cursor: pointer;
+  border: none;
+  background: #fff;
+}
+
+button > svg {
+  margin-right: 5px;
+  margin-left: 5px;
+  font-size: 20px;
+  transition: all 0.4s ease-in;
+}
+
+.prev:hover > svg {
+  font-size: 1.2em;
+  transform: translateX(-5px);
+}
+
+.next:hover > svg {
+  font-size: 1.2em;
+  transform: translateX(5px);
+}
+
+button:hover {
+  box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
+  transform: translateY(-2px);
+}
