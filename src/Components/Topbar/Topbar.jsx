@@ -3,6 +3,7 @@ import { links } from "./links";
 import Search from "./Search/Search";
 import "./Topbar.css"; // Import your CSS file
 import { Style } from "./TopbarStyle";
+import { Link } from "react-router-dom";
 export default function Topbar() {
   return (
     <Navbar
@@ -41,13 +42,13 @@ export default function Topbar() {
 
         <Navbar.Collapse id="navbarNav">
           <Nav className="ms-lg-auto">
-            <Nav.Link href="index.html" className="nav-link p-3">
+            <Link to={"/Home"} className="nav-link p-3">
               Home
-            </Nav.Link>
+            </Link>
 
-            <Nav.Link href="about.html" className="nav-link p-3">
-              About
-            </Nav.Link>
+            <Link to={"/AnimeList"} className="nav-link p-3">
+              Anime List
+            </Link>
 
             <NavDropdown
               title="Pages"
