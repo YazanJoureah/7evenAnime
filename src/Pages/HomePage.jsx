@@ -2,8 +2,9 @@ import Carousel from "../Components/Carousel/Carousel";
 import "./HomePage.css";
 import { getTopAnime, getLatestEpisodes } from "../api/Axios";
 import { useEffect, useState } from "react";
-import EpisodesCards from "../Components/Cards/EpisodesCards/EpisodesCards";
-import AnimeCards from "../Components/Cards/AnimeCard/AnimeCards";
+import Footer from "../Components/Footer/Footer";
+import Topbar from "../Components/Topbar/Topbar";
+import Lists from "../Components/Lists/Lists";
 
 export default function HomePage() {
   const [topAnimes, setTopAnimes] = useState([]);
@@ -29,6 +30,7 @@ export default function HomePage() {
 
   return (
     <>
+      <Topbar />
       <section className="hero-section">
         <div className="container">
           <div className="text-center mb-5 pb-2">
@@ -46,31 +48,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section-bg section-padding pb-0" id="section_2">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="section-title-wrap mb-5">
-              <h4 className="section-title">Lastest episodes</h4>
-            </div>
-          </div>
-          <div className="latest-ep-cards">
-            <EpisodesCards episodes={latestEpisodes} />
-          </div>
-        </div>
-      </section>
-
-      <section className="section-bg section-padding">
-        <div className="container">
-          <div className="section-title-wrap mb-5">
-            <h4 className="section-title">Top Animes</h4>
-          </div>
-          <div className="Top-Anime">
-            {topAnimes?.map((item, index) => (
-              <AnimeCards key={index} item={item} />
-            ))}
-          </div>
-        </div>
-      </section>
+      <Lists
+        type={"episodes"}
+        data={latestEpisodes}
+        Title={"Latest Episodes"}
+      />
+      <Lists type={"Anime"} Title={"Top Anime"} data={topAnimes} />
+      <Footer />
     </>
   );
 }

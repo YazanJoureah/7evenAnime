@@ -1,13 +1,16 @@
 import "./App.css";
-import Footer from "./Components/Footer/Footer";
-import Header from "./Components/Header/Header";
-import Topbar from "./Components/Topbar/Topbar";
+import { Routes, Route } from "react-router-dom";
 import HomePage from "./Pages/HomePage";
 import LandingPage from "./Pages/LandingPage/LandingPage";
+import AnimeList from "./Pages/Anime List/AnimeList";
 function App() {
   return (
     <>
-      <LandingPage />
+      <Routes>
+        <Route path="/" element={<LandingPage />}></Route>
+        <Route path="/Home" element={<HomePage />}></Route>
+        <Route path="/AnimeList" element={<AnimeList />}></Route>
+      </Routes>
     </>
   );
 }

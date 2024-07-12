@@ -7,6 +7,8 @@ import { getTopAnime } from "../../api/Axios";
 // import function to register Swiper custom elements
 import { register } from "swiper/element/bundle";
 
+import { Link } from "react-router-dom";
+
 export default function LandingPage() {
   // register Swiper custom elements
   register();
@@ -43,9 +45,9 @@ export default function LandingPage() {
   }, []);
 
   return (
-    <div>
+    <div className="LandingPage">
       <Header>
-        <div className="header">
+        <div className="L_header">
           <Image
             src="src/assets/Logo.png"
             alt="7even Anime"
@@ -53,8 +55,8 @@ export default function LandingPage() {
             style={{ width: "120px", height: "auto", marginLeft: " 50px" }}
           />
           <div className="links">
-            <a href="#HomePage">Home</a>
-            <a href="#Category">Anime List</a>
+            <Link to={"/Home"}>Home</Link>
+            <Link to={"/AnimeList"}>Anime List</Link>
             <a href="#Contact">Contact</a>
             <div className="auth">
               <a href="#Login"> Log In</a>
