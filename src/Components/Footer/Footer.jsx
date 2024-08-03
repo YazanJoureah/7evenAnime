@@ -1,3 +1,4 @@
+import { Form } from "react-router-dom";
 import "./Footer.css";
 export default function Footer() {
   return (
@@ -11,7 +12,6 @@ export default function Footer() {
                 className="custom-form subscribe-form"
                 action="#"
                 method="get"
-                role="form"
               >
                 <input
                   type="email"
@@ -108,19 +108,7 @@ export default function Footer() {
             </ul>
           </div>
           <div className="col-lg-3 col-12">
-            <p className="copyright-text mb-0">
-              Copyright © 2024 7even Anime
-              <br />
-              <br />
-              Design:{" "}
-              <a
-                rel="nofollow"
-                href="https://templatemo.com/page/1"
-                target="_parent"
-              >
-                TemplateMo
-              </a>
-            </p>
+            <p className="copyright-text mb-0">Copyright © 2024 7even Anime</p>
           </div>
         </div>
       </div>
