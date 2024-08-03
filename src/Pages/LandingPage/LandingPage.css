@@ -26,8 +26,9 @@
 }
 
 .sec1_content button,
-.header button {
+.L_header button {
   max-width: 200px;
+  max-height: 51px;
   position: relative;
   margin: 0;
   padding: 14px 30px;
@@ -50,20 +51,22 @@
 }
 
 .sec1_content button span,
-.header button span {
+.L_header button span {
   color: #164ca7;
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.7px;
+  text-wrap: nowrap;
+  overflow: hidden;
 }
 
 .sec1_content button:hover,
-.header button:hover {
+.L_header button:hover {
   animation: rotate624 1s ease-in-out both;
 }
 
 .sec1_content button:hover span,
-.header button:hover span {
+.L_header button:hover span {
   animation: storm1261 1s ease-in-out both;
   animation-delay: 0.06s;
 }
@@ -147,7 +150,8 @@
   gap: 5em;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(43, 53, 53, 0.652);
+  background-color: rgb(16, 19, 19);
+  max-height: 100px;
 }
 
 .L_header .links {
@@ -215,16 +219,17 @@
   margin: auto 50px;
 }
 
-.LandingPage .swiper {
-  width: 600px;
-  height: 300px;
+.LandingPage .swiper-container .swiper {
+  width: 100%;
+  height: 75%;
+  margin-top: 30px;
 }
 
 .navigations {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin: 10px;
+  margin: 20px;
 }
 
 .navigations button {
@@ -262,4 +267,11 @@ button > svg {
 button:hover {
   box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
   transform: translateY(-2px);
+}
+
+.L_header .links .Login_Button {
+  background: rgb(16, 19, 19);
+  color: #fff;
+  border-radius: 10px;
+  padding: 7px 20px;
 }

@@ -1,30 +1,33 @@
 import Carousel from "../Components/Carousel/Carousel";
 import "./HomePage.css";
-import { getTopAnime, getLatestEpisodes } from "../api/Axios";
+import { getTopAnime, getLatestEpisodes, getAiringNow } from "../api/Axios";
 import { useEffect, useState } from "react";
 import Footer from "../Components/Footer/Footer";
 import Topbar from "../Components/Topbar/Topbar";
 import Lists from "../Components/Lists/Lists";
 
 export default function HomePage() {
-  const [topAnimes, setTopAnimes] = useState([]);
+  const [airingAnime, setAiringAnime] = useState([]);
+  const [topAnime, setTopAnime] = useState([]);
   const [latestEpisodes, setLatestEpisodes] = useState([]);
   const [isLoading, setIsLoading] = useState(true); // Add loading state
 
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true); // Set loading to true before fetching
-      const Anime = await getTopAnime();
+      const AnimeAiring = await getAiringNow();
+      const TopAnime = await getTopAnime();
       const Episods = await getLatestEpisodes();
       console.log(Episods);
-      console.log(Anime);
-      setTopAnimes(Anime);
-      setLatestEpisodes(Episods);
+      console.log(AnimeAiring);
+      setAiringAnime(AnimeAiring.data);
+      setTopAnime(TopAnime.data);
+      setLatestEpisodes(Episods.data);
       setIsLoading(false); // Set loading to false after fetching
     };
     fetchData();
 
-    console.log(topAnimes);
+    console.log(airingAnime);
     console.log(latestEpisodes);
   }, []);
 
@@ -43,7 +46,7 @@ export default function HomePage() {
           {isLoading ? (
             <div>Loading...</div> // Or any loading indicator component
           ) : (
-            <Carousel items={topAnimes} />
+            <Carousel items={airingAnime} />
           )}
         </div>
       </section>
@@ -53,7 +56,7 @@ export default function HomePage() {
         data={latestEpisodes}
         Title={"Latest Episodes"}
       />
-      <Lists type={"Anime"} Title={"Top Anime"} data={topAnimes} />
+      <Lists type={"Anime"} Title={"Top Anime"} data={topAnime} />
       <Footer />
     </>
   );

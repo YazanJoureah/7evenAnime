@@ -1,0 +1,6 @@
+.animated-link {
+  text-decoration: none;
+}
+.animated-link:hover a {
+  color: rgb(0, 174, 255);
+}

@@ -1,0 +1,103 @@
+.filters-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Adjust width as needed */
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #f8f8f8; /* Light background */
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 15px; /* Spacing between grid items */
+}
+
+.page-container,
+.limit-container,
+.rating-container,
+.year-container,
+.type-container,
+.genres-container {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333; /* Darker text color */
+}
+
+input,
+select,
+.react-select-search__value-container {
+  /* Style for SelectSearch */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333; /* Darker text color */
+}
+
+.react-select-search__menu {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white; /* White background for dropdown */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow on dropdown */
+}
+
+.filter-button {
+  padding: 10px 20px;
+  background-color: #4caf50; /* Green */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+.filter-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.react-select-search__input {
+  border: none; /* Remove input border */
+  padding: 8px; /* Add padding to input */
+  color: #333; /* Darker text color */
+  font-size: 16px; /* Consistent font size */
+}
+
+.react-select-search__input::placeholder {
+  color: #999; /* Placeholder color */
+}
+
+.toggle-filters-button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-filters-button:hover {
+  background-color: #45a049;
+}
+
+.filters-container {
+  margin-top: 10px; /* Optional: Add some spacing */
+  transition: all 0.5s ease-in-out; /* Adjust duration as needed */
+  opacity: 0; /* Initially hidden */
+  transform: translateY(-10px); /* Initially shifted slightly up */
+  overflow: hidden; /* Hide content initially */
+}
+
+.filters-container.show {
+  opacity: 1; /* Make visible */
+  transform: translateY(0); /* Move to the normal position */
+  overflow: visible; /* Show content after animation */
+}
