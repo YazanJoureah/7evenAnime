@@ -10,10 +10,10 @@ import "./AnimeList.css";
 export default function AnimeList() {
   const [Animes, setAnimes] = useState([]);
   const [params, setParams] = useSearchParams();
-
+  const [page, setPage] = useState(1);
   useEffect(() => {
     const filters = {
-      page: params.get("page"),
+      page: page,
       limit: params.get("limit"),
       type: params.get("type"),
       min_score: params.get("min_score"),
@@ -24,14 +24,18 @@ export default function AnimeList() {
 
     const fetchData = async () => {
       const Anime = await getAnimeList(filters);
-      setAnimes(Anime.data);
+      setAnimes(Anime);
     };
 
     fetchData();
 
     console.log(filters);
-  }, [params]);
+    console.log(Animes);
+  }, [params, page]);
 
+  const pageChange = (current) => {
+    setPage(current);
+  };
   return (
     <>
       <Topbar />
@@ -39,7 +43,12 @@ export default function AnimeList() {
 
       <Filters />
 
-      <Lists Title={"Anime List"} data={Animes} type={"Anime"} />
+      <Lists
+        Title={"Anime List"}
+        data={Animes}
+        type={"Anime"}
+        onChange={pageChange}
+      />
     </>
   );
 }

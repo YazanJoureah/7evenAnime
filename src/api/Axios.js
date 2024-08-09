@@ -6,11 +6,19 @@ const Axios = axios.create({
 });
 
 // Top animeis
-export const getTopAnime = async () => {
+export const getTopAnime = async (page) => {
   let response;
   try {
+    /* await fetch("src/api/anime.json")
+      .then((res) => res.json())
+      .then((data) => {
+        response = data;
+      });
+    return response;*/
+    console.log(page);
     await Axios({
       url: "top/anime",
+      params: { page: page },
     }).then((res) => (response = res.data));
 
     return response;
@@ -103,6 +111,79 @@ export const getAiringNow = async () => {
   } catch (error) {
     console.error("Error fetching animes:", error);
 
+    await fetch("src/api/anime.json")
+      .then((res) => res.json())
+      .then((data) => {
+        response = data;
+      });
+    return response;
+
+    // Handle errors appropriately, e.g., throw an error or return an empty array
+    return [];
+  }
+};
+
+//get This Season
+export const getThisSeason = async (page) => {
+  let response;
+  try {
+    await Axios({
+      url: "/seasons/now",
+      params: {
+        type: "tv",
+        order_by: "popularity",
+        page: page,
+      },
+    }).then((res) => (response = res.data));
+
+    return response;
+  } catch (error) {
+    console.error("Error fetching animes:", error);
+
+    // Handle errors appropriately, e.g., throw an error or return an empty array
+    return [];
+  }
+};
+
+//get upcoming Season
+export const getUpcomingSeason = async (page) => {
+  let response;
+  try {
+    await Axios({
+      url: "/seasons/upcoming",
+      params: {
+        type: "tv",
+        order_by: "popularity",
+        page: page,
+      },
+    }).then((res) => (response = res.data));
+
+    return response;
+  } catch (error) {
+    console.error("Error fetching animes:", error);
+
+    // Handle errors appropriately, e.g., throw an error or return an empty array
+    return [];
+  }
+};
+
+//get Year Season
+export const getYearSeason = async (page, year, season) => {
+  let response;
+  try {
+    await Axios({
+      url: `/seasons/${year}/${season}`,
+      params: {
+        type: "tv",
+        order_by: "popularity",
+        page: page,
+      },
+    }).then((res) => (response = res.data));
+
+    return response;
+  } catch (error) {
+    console.error("Error fetching animes:", error);
+
     // Handle errors appropriately, e.g., throw an error or return an empty array
     return [];
   }
@@ -119,7 +200,12 @@ export const getLatestEpisodes = async () => {
     return response;
   } catch (error) {
     console.error("Error fetching animes:", error);
-
+    await fetch("src/api/latestEpsod.json")
+      .then((res) => res.json())
+      .then((data) => {
+        response = data;
+      });
+    return response;
     // Handle errors appropriately, e.g., throw an error or return an empty array
     return [];
   }

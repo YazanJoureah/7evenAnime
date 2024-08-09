@@ -1,13 +1,14 @@
 export const Style = {
   Navbar: {
-    backgroundColor: "transparent",
-    position: "absolute",
+    backgroundColor: "#19a2d0",
+    position: "sticky",
     top: 0,
     right: 0,
     left: 0,
     zIndex: 9,
     paddingTop: "20px",
     paddingBottom: "20px",
+    opacity: 1,
   },
   Navbar_toggler: {
     border: "0",

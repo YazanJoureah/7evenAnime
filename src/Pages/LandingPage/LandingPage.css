@@ -115,17 +115,17 @@
   }
 }
 
-.btn-shine {
+.LandingPage .btn-shine {
   border: 1px solid;
   overflow: hidden;
   position: relative;
 }
 
-.btn-shine span {
+.LandingPage .btn-shine span {
   z-index: 20;
 }
 
-.btn-shine:after {
+.LandingPage .btn-shine:after {
   background: #38ef7d;
   content: "";
   height: 155px;
@@ -139,7 +139,7 @@
   z-index: -10;
 }
 
-.btn-shine:hover:after {
+.LandingPage .btn-shine:hover:after {
   left: 120%;
   transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
 }
@@ -219,20 +219,20 @@
   margin: auto 50px;
 }
 
-.LandingPage .swiper-container .swiper {
+.swiper-container .swiper {
   width: 100%;
   height: 75%;
   margin-top: 30px;
 }
 
-.navigations {
+.sec2 .navigations {
   display: flex;
   align-items: center;
   justify-content: space-around;
   margin: 20px;
 }
 
-.navigations button {
+.sec2 .navigations button {
   display: flex;
   height: 3em;
   width: 100px;
@@ -247,24 +247,24 @@
   background: #fff;
 }
 
-button > svg {
+.sec2 button > svg {
   margin-right: 5px;
   margin-left: 5px;
   font-size: 20px;
   transition: all 0.4s ease-in;
 }
 
-.prev:hover > svg {
+.sec2 .prev:hover > svg {
   font-size: 1.2em;
   transform: translateX(-5px);
 }
 
-.next:hover > svg {
+.sec2 .next:hover > svg {
   font-size: 1.2em;
   transform: translateX(5px);
 }
 
-button:hover {
+.sec2 .navigations button:hover {
   box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
   transform: translateY(-2px);
 }

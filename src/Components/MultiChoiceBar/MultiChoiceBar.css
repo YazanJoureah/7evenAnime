@@ -1,0 +1,76 @@
+.MultiChoiceBar-container {
+  background-color: #fff;
+  padding: 10px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+.MultiChoiceBar-value {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+.MultiChoiceBar-options {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  gap: 20px;
+}
+.MultiChoiceBar-row {
+  display: block;
+}
+.MultiChoiceBar-option {
+  font-size: 32px;
+  border-radius: 5px;
+  border: none;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+.MultiChoiceBar-option:hover {
+  background-color: #e0e0e0;
+  scale: 1.09;
+}
+
+.banner {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  background-color: #fff;
+  padding: 20px;
+}
+.year-group {
+  border: 1px solid transparent; /* Default border color */
+  border-radius: 5px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.year-label {
+  font-weight: bold;
+  background-color: #f0f0f0;
+  align-self: center;
+  position: relative;
+  display: inline-block;
+  top: -18px;
+  padding: 0 10px;
+  border-radius: 10px;
+}
+
+.winter {
+  border-color: #008080; /* Teal */
+}
+
+.spring {
+  border-color: #4caf50; /* Green */
+}
+
+.summer {
+  border-color: #ffc107; /* Yellow */
+}
+
+.fall {
+  border-color: #ff5733; /* Orange */
+}

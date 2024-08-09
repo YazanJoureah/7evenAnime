@@ -58,19 +58,15 @@ export const AnimatedText = ({
               .trim()
               .split(" ")
               .map((word, wordIndex) => (
-                <span key={wordIndex} style={{ display: "inline-block" }}>
-                  {word.split("").map((char, charIndex) => (
-                    <motion.span
-                      key={charIndex}
-                      style={{ display: "inline-block" }}
-                      variants={animation}
-                    >
-                      {char}
-                    </motion.span>
-                  ))}
+                <motion.span
+                  key={wordIndex}
+                  style={{ display: "inline-block" }}
+                  variants={animation}
+                >
+                  {word}
                   {/* Add a space between words */}
                   &nbsp;
-                </span>
+                </motion.span>
               ))}
           </span>
         ))}

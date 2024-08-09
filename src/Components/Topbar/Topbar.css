@@ -49,7 +49,9 @@
   height: 2px !important;
   content: "" !important;
 }
-
+.navbar {
+  height: 110px;
+}
 .navbar-toggler .navbar-toggler-icon::before {
   top: -8px !important;
 }

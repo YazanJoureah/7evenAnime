@@ -5,7 +5,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/effect-coverflow";
 import "./Carousel.css";
-import { EffectCoverflow } from "swiper/modules";
+import { EffectCoverflow, Autoplay } from "swiper/modules";
 import AnimeCards from "../Cards/AnimeCard/AnimeCards";
 
 export default function Carousel(items) {
@@ -15,14 +15,15 @@ export default function Carousel(items) {
       grabCursor={true}
       centeredSlides={true}
       loop={true}
-      slidesPerView={"auto"}
+      autoplay={{ delay: 5000, disableOnInteraction: true }}
+      slidesPerView={4}
       coverflowEffect={{
         rotate: 0,
         stretch: 0,
         depth: 100,
         modifier: 2.5,
       }}
-      modules={[EffectCoverflow]}
+      modules={[EffectCoverflow, Autoplay]}
       className="swiper"
     >
       {items.items?.map((item, index) => (

@@ -53,21 +53,15 @@
   position: absolute;
   display: grid;
   padding: 0.5rem;
-  justify-content: center;
   margin-top: 10px;
-  top: 70%;
   border-radius: 10px;
   box-shadow: 3px 3px 300px #051937 inset, -2px -2px 100px #0a0222;
   backdrop-filter: blur(0.5px);
-  height: 95%;
-  width: 95%;
-  transition: all 1s linear;
 }
 .title-wrap {
   grid-column: span 2 / span 2;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
+  justify-self: center;
+  width: 265px;
 }
 
 .title {
@@ -80,46 +74,25 @@
   margin: 5px;
 }
 
-.image:hover .content {
-  top: 0;
-}
-
-.image:hover .trail {
-  animation: trail 1s ease-in-out;
-}
-
 .desc {
   grid-column: span 2 / span 2;
   line-height: 1.75rem;
   font-weight: 600;
   color: white;
-  opacity: 0;
   font-size: 15px;
   overflow-y: auto;
   margin: 10px;
   padding: 0;
   text-align: center;
   scrollbar-width: none;
-  transition: all 01.5s ease-in-out;
-}
-
-.image:hover .desc {
-  opacity: 1;
 }
 
 .badges {
-  display: flex;
-  flex-wrap: wrap;
-  width: max-content;
+  width: 265px;
   gap: 5px;
-  height: fit-content;
-  opacity: 0;
-  transition: all 1s ease-in-out;
+  margin: 5px;
 }
 
-.image:hover .badges {
-  opacity: 1;
-}
 .badges .badge {
   background-color: rgba(203, 213, 225);
   color: #0a0222;
@@ -134,9 +107,8 @@
 .cards-footer {
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
-  width: max-content;
+  justify-self: center;
 }
 .info {
   display: flex;
@@ -149,7 +121,7 @@
   margin: 5px;
   font-size: 14px;
 }
-.show-details {
+.a-card .content .show-details {
   padding: 0.2rem 1rem;
   border-radius: 0.5rem;
   transition-duration: 300ms;
@@ -159,7 +131,7 @@
   cursor: pointer;
 }
 
-.show-details:hover {
+.a-card .content .show-details:hover {
   color: rgb(203, 213, 225);
   background-color: rgb(71, 85, 105);
 }

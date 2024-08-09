@@ -1,18 +1,31 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { Container, Image, Nav, NavDropdown, Navbar } from "react-bootstrap";
 import { links } from "./links";
 import Search from "./Search/Search";
 import "./Topbar.css"; // Import your CSS file
 import { Style } from "./TopbarStyle";
 import { Link } from "react-router-dom";
-export default function Topbar() {
+import { useEffect } from "react";
+
+export default function Topbar({ style }) {
+  useEffect;
   return (
     <Navbar
       collapseOnSelect
       expand="lg"
-      className="navbar"
-      style={Style.Navbar}
+      style={{
+        backgroundColor: "#19a2d0",
+        position: "sticky",
+        top: 0,
+        right: 0,
+        left: 0,
+        zIndex: 9,
+        paddingTop: "20px",
+        paddingBottom: "20px",
+        opacity: style,
+      }}
     >
-      <Container>
+      <Container className="navbar">
         <Navbar.Brand href="index.html" className="me-lg-5 me-0">
           <Image
             src="src/assets/Logo.png"
@@ -57,13 +70,10 @@ export default function Topbar() {
               style={{ paddingBottom: "0" }}
             >
               {links.map((link, i) => (
-                <NavDropdown.Item
-                  href={link.href}
-                  key={i}
-                  className="dropdown-item"
-                  style={Style.Dropdown_item}
-                >
-                  {link.name}
+                <NavDropdown.Item key={i} style={Style.Dropdown_item}>
+                  <Link className="dropdown-item" to={link.href}>
+                    {link.name}
+                  </Link>
                 </NavDropdown.Item>
               ))}
             </NavDropdown>
@@ -82,19 +92,3 @@ export default function Topbar() {
     </Navbar>
   );
 }
-
-/*
-**Explanation:**
-
-- **Inline Styles:** The CSS rules from your original CSS are directly applied to the JSX elements as inline styles using the `style` attribute. This provides granular control over individual elements.
-- **CSS Variables:**  The code uses CSS variables (e.g., `var(--white-color)`, `var(--border-radius-large)`) to keep styles consistent and maintainable. Make sure you define these variables in your CSS file.
-- **Structure:** The JSX structure mirrors the original HTML structure, making it easier to understand how the code relates to the design.
-
-**Important Considerations:**
-
-- **CSS Organization:**  You should ideally separate your CSS into different files for different components or sections.  This helps you keep your code organized and maintainable.
-- **CSS Preprocessors:**  For larger projects, consider using CSS preprocessors like Sass or Less, which allow you to write more modular and reusable CSS.
-- **CSS-in-JS Libraries:**  There are dedicated libraries for writing CSS directly within your JavaScript code (e.g., styled-components, emotion). These libraries provide benefits such as dynamic styling and better organization.
-
-Remember to adapt the CSS values (like `var(--white-color)`) to match your project's design system. 
-*/

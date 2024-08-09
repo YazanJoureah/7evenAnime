@@ -1,0 +1,28 @@
+.L_pagination {
+  display: flex;
+  border: 1px solid #fff;
+  justify-content: center;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.L_pagination button {
+  padding: 8px 16px;
+  margin: 3px;
+  font-size: 16px;
+  border: none;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.L_pagination button:hover {
+  background-color: #e0e0e0;
+  text-decoration: underline;
+}
+
+.L_pagination .active {
+  background-color: #333;
+  color: #fff;
+}
